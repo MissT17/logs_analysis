@@ -52,7 +52,7 @@ This version of code is based on views, so please create the following views bef
 
 Expected Outcome
 
-On running the logproject.py file, you will see the results displayed directly in the Terminal and will be separated by a dotted line. 
+On running the logproject.py file, you will see the results displayed directly in the Terminal. The results.txt file also provides a sample of results data.
 
 License
 
