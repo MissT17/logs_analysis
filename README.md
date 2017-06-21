@@ -12,9 +12,9 @@ In the GitHub *logs_analysis* project repository you will find the following fil
 
 # Pre-requisites
 This project runs on the Linux-based virtual machine, so before running the code, please make sure that:
-1.you setup and configure the virtual machine according to the [following instructions](https://d17h27t6h515a5.cloudfront.net/topher/2017/June/5948287e_fsnd-virtual-machine/fsnd-virtual-machine.zip) 
-2.version 3.5.2 of Python is installed on that machine (as the code is adapted to this version of Python)
-2.the `newsdata.sql` file is placed in the same folder as the logproject.file on your virtual machine
+1. you setup and configure the virtual machine according to the [following instructions](https://d17h27t6h515a5.cloudfront.net/topher/2017/June/5948287e_fsnd-virtual-machine/fsnd-virtual-machine.zip) 
+2. version 3.5.2 of Python is installed on that machine (as the code is adapted to this version of Python)
+3. the `newsdata.sql` file is placed in the same folder as the logproject.file on your virtual machine
 
 # Installation
 
