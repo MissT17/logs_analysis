@@ -49,7 +49,7 @@ This version of code is based on views, so please create the following views bef
       ```
 2. Once the views are created, close the connection with the database by clicking Ctrl+D on the keyboard for Mac > run the `logproject.py` in the virtual achine environment. 
 3. The views at the end of the operations are dropped, which means that if you are willing to run the code again, you need to recreate the necessary views in the news table again. 
-4. newsdata.sql can be downloaded [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip), if necessary
+4. `newsdata.sql` can be downloaded [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip), if necessary
 
 
 # Expected Outcome
