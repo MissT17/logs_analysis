@@ -47,7 +47,8 @@ This version of code is based on views, so please create the following views bef
                    as percent from error_view, total_requests
                    where error_view.date=total_requests.date;
       ```
-2. Once the views are created, close the connection with the database by clicking Ctrl+D on the keyboard > run the logproject.py in the virtual achine environment.  
+2. Once the views are created, close the connection with the database by clicking Ctrl+D on the keyboard > run the logproject.py in the virtual achine environment. 
+3. The views at the end of the operations are dropped, which means that if you are willing to run the code again, you need to recreate the necessary views in the news table again. 
 
 
 Expected Outcome
