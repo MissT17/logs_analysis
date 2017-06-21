@@ -6,9 +6,9 @@ This program allows to query the newsdata.sql using direct queries to database.
 
 In the GitHub *logs_analysis* project repository you will find the following files:
 
-`logproject.py` - the file contains all the requests to the database
-`results.txt` - the plain text file containing the results of the queries
-`README.md` - contains a short "How To" to run the program.
+  * `logproject.py` - the file contains all the requests to the database
+  * `results.txt` - the plain text file containing the results of the queries
+  * `README.md` - contains a short "How To" to run the program.
 
 # Pre-requisites
 This project runs on the Linux-based virtual machine with vagrant, so before running the code, please make sure that:
