@@ -23,29 +23,19 @@ This version of code is based on views, so please create the following views bef
       *art_auth_view*
       ```psql
       create view art_auth_view as select articles.author, authors.name, articles.title, (select count(log.path) as views
-        from log where log.path like '%' ||articles.slug)
-        from articles, authors where authors.id = articles.author
-        order by views desc;
+        from log where log.path like '%' ||articles.slug) from articles, authors where authors.id = articles.author order by views desc;
       ```
       *total_requests*
       ```psql
-      create view total_requests as
-                   select date(time), count(status) as total_requests_pos
-                   from log group by date;
+      create view total_requests as select date(time), count(status) as total_requests_pos from log group by date;
       ```
       *error_view*
       ```psql
-      create view error_view as
-                   select date(time), count(status)
-                   as error_requests from log where status !='200 OK'
-                   group by date;
+      create view error_view as select date(time), count(status) as error_requests from log where status !='200 OK' group by date;
       ```
       *error_perc*
       ```psql
-      create view error_perc as select error_view.date,
-                   round(100.0 * error_requests/total_requests_pos, 2)
-                   as percent from error_view, total_requests
-                   where error_view.date=total_requests.date;
+      create view error_perc as select error_view.date, round(100.0 * error_requests/total_requests_pos, 2) as percent from error_view,         total_requests where error_view.date=total_requests.date;
       ```
 2. Once the views are created, close the connection with the database by clicking Ctrl+D on the keyboard for Mac > run the `logproject.py` in the virtual achine environment. 
 3. The views at the end of the operations are dropped, which means that if you are willing to run the code again, you need to recreate the necessary views in the news table again. 
