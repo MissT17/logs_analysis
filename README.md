@@ -19,7 +19,8 @@ This project runs on the Linux-based virtual machine, so before running the code
 # Installation
 
 This version of code is based on views, so please create the following views before you run the code:
-1. open the Terminal or other command line interface tool on your computer > navigate to the vagrant folder > start the virtual machine > run psql -d news > insert the below mentioned requests one by one
+1. open the Terminal or other command line interface tool on your computer > navigate to the vagrant folder > start the virtual machine > run psql -d news > insert the below mentioned requests one by one:
+
       *art_auth_view*
       ```psql
       create view art_auth_view as select articles.author, authors.name, articles.title, (select count(log.path) as views
