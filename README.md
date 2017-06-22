@@ -46,7 +46,7 @@ This version of code is based on views, so please create the following views bef
       ```psql
       create view error_perc as select error_view.date, round(100.0 * error_requests/total_requests_pos, 2) as percent from error_view,   total_requests where error_view.date=total_requests.date;
       ```
-      The final command in `log_project.py` displays only the days where the number of errors exceeded 1%.
+      The final query in `log_project.py` displays only the days where the number of errors exceeded 1%.
       
 2. Once the views are created, close the connection with the database by clicking `Ctrl+D` on the keyboard for Mac > run the `log_project.py`. 
 
