@@ -42,6 +42,7 @@ This version of code is based on views, so please create the following views bef
       create view error_perc as select error_view.date, round(100.0 * error_requests/total_requests_pos, 2) as percent from error_view,   total_requests where error_view.date=total_requests.date;
       ```
 2. Once the views are created, close the connection with the database by clicking `Ctrl+D` on the keyboard for Mac > run the `logproject.py`. 
+
 __Note__: The views at the end of the operations are dropped, which means that if you are willing to run the code again, you need to recreate the necessary views in the news table again. 
 
 # Expected Outcome
