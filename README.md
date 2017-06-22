@@ -16,7 +16,9 @@ This project was created on a Linux-based virtual machine with vagrant, so befor
 or
 2. have the following installed and created:
     * postgresql
-    * pip3
+    * python3
+    * pip3 
+    * psycopg2
     * download the `newsdata.sql` file [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
     * create database *news* containing the data from `newsdata.sql`
 
