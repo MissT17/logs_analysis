@@ -12,12 +12,13 @@ In the GitHub *logs_analysis* project repository you will find the following fil
 
 # Pre-requisites
 This project was created on a Linux-based virtual machine with vagrant, so before running the code, please make sure that you either:
-1. setup and configure the virtual machine as [follows](https://d17h27t6h515a5.cloudfront.net/topher/2017/June/5948287e_fsnd-virtual-machine/fsnd-virtual-machine.zip) or have the following installed and created:
+1. setup and configure the virtual machine as [follows](https://d17h27t6h515a5.cloudfront.net/topher/2017/June/5948287e_fsnd-virtual-machine/fsnd-virtual-machine.zip) 
+or
+2. have the following installed and created:
     * postgresql
     * pip3
+    * download the `newsdata.sql` file [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
     * create database *news* containing the data from `newsdata.sql`
-    * create the user allowed to have access to the database *news*
-2. download the `newsdata.sql` file [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip), if necessary, and place it in the same folder as the logproject file on your virtual machine
 
 # Installation
 
