@@ -1,6 +1,6 @@
 # Logs Analysis Project Description
 
-This program allows to query the newsdata.sql using direct queries to database.
+This program allows to query the newsdata.sql using direct queries to the database.
 
 # Directory Structure
 
@@ -22,7 +22,11 @@ This project was created on a Linux-based virtual machine with vagrant, so befor
 # Installation
 
 This version of code is based on views, so please create the following views before you run the code:
-1. open the Terminal or another command line interface tool on your computer > navigate to the vagrant folder/the folder containing the project files > start the virtual machine(it is not necessary if you run the program directly from the computer) > run psql -d news > insert the below mentioned requests one by one:
+1. open the Terminal or another command line interface tool on your computer 
+    > navigate to the vagrant folder/the folder containing the project files 
+    > start the virtual machine(it is not necessary if you run the program directly from the computer) 
+    > run psql -d news 
+    > insert the below mentioned requests one by one:
 
       *art_auth_view* - this view allows to combine in one table rather than three the names of the authors with the names of the articles and the quantity of times those articles have been viewed individually.(In the `logproject.py` after that I just sum up all the views of articles per author and display them in the order from most to least viewed). 
       ```psql
