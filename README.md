@@ -6,7 +6,7 @@ This program allows to query the newsdata.sql using direct queries to the databa
 
 In the GitHub *logs_analysis* project repository you will find the following files:
 
-  * `logproject.py` - the file contains all the requests to the database
+  * `log_project.py` - the file contains all the requests to the database
   * `results.txt` - the plain text file containing the results of the queries
   * `README.md` - contains a short "How To" to run the program.
 
@@ -25,7 +25,7 @@ or
 This version of code is based on views, so please create the following views before you run the code:
 1. open the Terminal or another command line interface tool on your computer, access the database *news* and insert the below mentioned requests one by one:
 
-      *art_auth_view* - this view allows to combine in one table rather than three the names of the authors with the names of the articles and the quantity of times those articles have been viewed individually.(In the `logproject.py` after that I just sum up all the views of articles per author and display them in the order from most to least viewed). 
+      *art_auth_view* - this view allows to combine in one table rather than three the names of the authors with the names of the articles and the quantity of times those articles have been viewed individually.(In the `log_project.py` after that I just sum up all the views of articles per author and display them in the order from most to least viewed). 
       ```psql
       create view art_auth_view as select articles.author, authors.name, articles.title, (select count(log.path) as views
         from log where log.path like '%' ||articles.slug) from articles, authors where authors.id = articles.author order by views desc;
@@ -44,15 +44,15 @@ This version of code is based on views, so please create the following views bef
       ```psql
       create view error_perc as select error_view.date, round(100.0 * error_requests/total_requests_pos, 2) as percent from error_view,   total_requests where error_view.date=total_requests.date;
       ```
-      The final request in `logproject.py` displays only the days where the number of errors exceeded 1%.
+      The final request in `log_project.py` displays only the days where the number of errors exceeded 1%.
       
-2. Once the views are created, close the connection with the database by clicking `Ctrl+D` on the keyboard for Mac > run the `logproject.py`. 
+2. Once the views are created, close the connection with the database by clicking `Ctrl+D` on the keyboard for Mac > run the `log_project.py`. 
 
 __Note__: The views at the end of the operations are dropped, which means that if you are willing to run the code again, you need to recreate the necessary views in the news table again. 
 
 # Expected Outcome
 
-On running the `logproject.py` file, you will see the results displayed directly in the Terminal. The `results.txt` file also provides a sample of results data.
+On running the `log_project.py` file, you will see the results displayed directly in the Terminal. The `results.txt` file also provides a sample of results data.
 
 # License
 
