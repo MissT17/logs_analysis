@@ -22,7 +22,7 @@ This project was created on a Linux-based virtual machine with vagrant, so befor
 # Installation
 
 This version of code is based on views, so please create the following views before you run the code:
-1. open the Terminal or other command line interface tool on your computer > navigate to the vagrant folder > start the virtual machine > run psql -d news > insert the below mentioned requests one by one:
+1. open the Terminal or another command line interface tool on your computer > navigate to the vagrant folder > start the virtual machine > run psql -d news > insert the below mentioned requests one by one:
 
       *art_auth_view* - this view allows to combine in one table rather than three the names of the authors with the names of the articles and the quantity of times those articles have been viewed individually.
       ```psql
